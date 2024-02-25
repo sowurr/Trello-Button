@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>It's a New Day Button</title>
+</head>
+<body>
+    <script src="https://p.trellocdn.com/power-up.min.js"></script>
+    <script>
+        var t = TrelloPowerUp.iframe();
+
+        window.TrelloPowerUp.initialize({
+            'card-buttons': function(t, options) {
+                return [{
+                    icon: 'https://example.com/icon.png', // Replace with your icon URL
+                    text: 'New Day Message',
+                    callback: function(t) {
+                        t.alert({
+                            message: "It's a new day, man!",
+                            duration: 10, // Duration in seconds
+                            display: 'info'
+                        });
+                    }
+                }];
+            }
+        });
+    </script>
+</body>
+</html>
